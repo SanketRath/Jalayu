@@ -1,0 +1,189 @@
+:root {
+    --primary: #55bbff;
+    --secondary: #00affa;
+    --background: transparent;
+    --green: #2db9e8;
+    --yellow: #2c92ff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    height: 100%;
+    background: #001220;
+    /* background-image: url(blurry-gradient-haikei.svg);
+    background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: cover */
+}
+
+.chart-container {
+    flex: 1;
+    max-height: 500px;
+    margin: 20px 20px;
+    border-radius: 30px;
+}
+
+.container {
+    display: flex;
+}
+
+
+h1 {
+    background: #000;
+    background-image: linear-gradient(45deg, rgb(4, 163, 155), rgb(0, 81, 255));
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+
+    font-size: 80px;
+    font-weight: 1000;
+    letter-spacing: 2px;
+}
+
+.check {
+    border-radius: 100%;
+    padding: 75px 30px;
+    background: #000;
+    background-image: linear-gradient(45deg, lightblue, rgb(0, 81, 255));
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 3.5rem;
+    border-color: #00affa;
+    border-style: double;
+    border-width: 15px;
+    background-size: 100%;
+    -moz-text-fill-color: transparent;
+    transition: all 1S;
+}
+
+.check:hover {
+    padding: 78px 32px;
+    font-size: 42px;
+    
+    background-size: 100%;
+    -moz-text-fill-color: transparent;
+    box-shadow: 10px 20px 20px  rgb(30, 140, 155);
+}
+
+.value {
+    background-color: var(--background);
+    display: block;
+    flex: 1;
+    border: 3px solid var(--primary);
+    padding: 15px;
+    margin: 40px;
+    box-shadow: 10px -10px 0 -2px var(--background), 10px -10px var(--green),
+        20px -20px 0 -2px var(--background), 20px -20px var(--yellow);
+    transition: box-shadow 1s, top 1s, left 1s;
+    position: relative;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+
+}
+
+.value:hover {
+    top: -20px;
+    left: 20px;
+    box-shadow: 0 0 0 -2px var(--background), 0 0 0 0 var(--green),
+        0 0 0 -2px var(--background), 0 0 0 0 var(--yellow),
+}
+
+
+h2 {
+    font-size: 40px;
+    background-image: linear-gradient(45deg, rgb(4, 163, 155), rgb(0, 81, 255));
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.inputs {
+    color: #0469ff;
+    text-align: center;
+    padding: 15px;
+    font-weight: 800;
+    font-size: 25px;
+    border-radius: 100px;
+    width: 80%;
+    border-style: solid;
+    outline: none;
+    border-width: 4px;
+    border-color: rgb(0, 225, 255);
+    background: transparent;
+    margin: 50px 0px 50px 0px ;
+}
+
+.highcharts-empty-series,
+.highcharts-point.highcharts-color-0[fill="#55BF3B"] ,
+.highcharts-point.highcharts-color-0[fill="#DDDF0D"] ,
+.highcharts-point.highcharts-color-0[fill="#DF5353"]  {
+        display: none;
+    } 
+
+
+
+@media only screen and (max-width: 740px) {
+    body {
+        margin: 10px;
+        margin-top: 50px;
+        margin-right: 35px;
+    }
+
+    h1 {
+        font-size: 40px;
+        margin-bottom: 60px;
+    }
+
+    .chart-container {
+        max-height: 320px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .value {
+        margin: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .inputs {
+        font-size: 18px;
+        width: 80%;
+        margin: 20px 0;
+    }
+
+    .check {
+        padding: 40px 20px;
+        font-size: 24px;
+        margin: 1.5rem;
+    }
+
+    .check:hover {
+    padding: 45px 25px;
+    margin: 1.5rem;
+    font-size: 28px;
+    }
+
+      
+
+}
